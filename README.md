@@ -13,10 +13,14 @@ Just include AdBlockInsights.js into either your footer or header.
 <script src="AdBlockInsights.js"></script>
 
 Then, after invoke:
-
+```javascript
 AdBlockInsights.init(function() {
   alert("You have an ad blocker installed");
 });
+```
+
+NOTE: AdBlockInsights.init MUST be invoked when the DOM is ready. If you're using jQuery you can use $(function(){ } 
+
 
 You can use Google Analytics events to track - as generally ad blockers are quite generous and allow GA calls through. 
 However, for the most accurate results I recommend using some internal tracking software.
