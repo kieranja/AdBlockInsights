@@ -19,8 +19,15 @@ AdBlockInsights.init(function() {
 });
 ```
 
-NOTE: AdBlockInsights.init MUST be invoked when the DOM is ready. If you're using jQuery you can use $(function(){ } 
+NOTE: AdBlockInsights.init MUST be invoked when the DOM is ready. If you're using jQuery you can use
 
+```javascript
+$(function(){ 
+  AdBlockInsights.init(function() {
+    alert("You have an ad blocker installed");
+  });
+});
+```
 
 You can use Google Analytics events to track - as generally ad blockers are quite generous and allow GA calls through. 
 However, for the most accurate results I recommend using some internal tracking software.
