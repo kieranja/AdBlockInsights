@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="AdBlockInsights.js"></script>
+        <script>      
+            /**
+             * See: http://www.dustindiaz.com/smallest-domready-ever
+             * @param {Closure} f
+             * @returns {undefined}
+             */
+            function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f();}
+        </script>
+        
+        
+        <script>
+            r(function(){ 
+            AdBlockInsights.init(function(){ 
+                alert('blocked');
+                
+                // Track it in GA
+                /*ga('send', {
+                 'hitType': 'event',          // Required.
+                 'eventCategory': 'data',   // Required.
+                 'eventAction': 'adblock',      // Required.
+                 'eventLabel': 'ad blocker',
+                 'eventValue': 1
+               });  */ 
+            });
+        });</script>
+    </head>
+    <body>
+        <h1>Ad Block Insights</h1>
+        <p>Install an adblocker and an alert box will show up.</p>
+    </body>
+</html>

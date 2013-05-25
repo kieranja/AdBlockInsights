@@ -1,0 +1,1 @@
+window.AdBlockInsights.AdBlocker = false;
